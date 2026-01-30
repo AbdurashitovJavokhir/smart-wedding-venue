@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmed - Smart Wedding Venue Finder</title>
+    <link rel="stylesheet" href="css/wedding-confirmation.css">
+</head>
+<body>
+    <div class="confirmation-container">
+        <div class="success-icon">
+            <div class="checkmark">✓</div>
+        </div>
+
+        <h1 class="confirmation-title">Your Booking is Confirmed!</h1>
+        <p class="confirmation-subtitle">We've reserved this venue for your selected date.</p>
+
+        <div class="details-card">
+            <div class="booking-id-section">
+                <div class="booking-id-label">Booking ID</div>
+                <div class="booking-id-value" id="bookingId">BK-2026-341</div>
+            </div>
+
+            <div class="venue-name" id="venueName">Crystal Ballroom</div>
+
+            <div class="detail-item">
+                <div class="detail-icon-wrapper icon-pink">
+                    <span class="detail-icon">📅</span>
+                </div>
+                <div class="detail-content">
+                    <div class="detail-label">Date</div>
+                    <div class="detail-value" id="bookingDate">Saturday, January 31, 2026</div>
+                </div>
+            </div>
+
+            <div class="detail-item">
+                <div class="detail-icon-wrapper icon-purple">
+                    <span class="detail-icon">🕐</span>
+                </div>
+                <div class="detail-content">
+                    <div class="detail-label">Time Slot</div>
+                    <div class="detail-value" id="bookingTime">10:00-22:00</div>
+                </div>
+            </div>
+
+            <div class="detail-item">
+                <div class="detail-icon-wrapper icon-blue">
+                    <span class="detail-icon">👥</span>
+                </div>
+                <div class="detail-content">
+                    <div class="detail-label">Number of Guests</div>
+                    <div class="detail-value" id="bookingGuests">100 guests</div>
+                </div>
+            </div>
+
+            <div class="detail-item">
+                <div class="detail-icon-wrapper icon-red">
+                    <span class="detail-icon">💰</span>
+                </div>
+                <div class="detail-content">
+                    <div class="detail-label">Total Price</div>
+                    <div class="detail-value price" id="bookingPrice">$9,000</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="action-buttons">
+            <button class="btn btn-primary" onclick="downloadConfirmation()">
+                <span>📥</span>
+                Download Confirmation
+            </button>
+            <a href="wedding-venue-finder.html" class="btn btn-secondary">
+                <span>🏠</span>
+                Back to Home
+            </a>
+        </div>
+
+        <div class="thank-you-message">
+            Thank you for choosing our Smart Venue Platform. We wish you a beautiful celebration. 🎊
+        </div>
+    </div>
+
+    <script src="js/wedding-confirmation.js"></script>
+</body>
+</html>

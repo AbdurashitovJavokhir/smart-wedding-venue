@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venue Details - The Grand Terrace</title>
+    <link rel="stylesheet" href="css/wedding-details.css">
+</head>
+<body>
+    <button class="back-button" onclick="goBack()">
+        ← Back to Results
+    </button>
+
+    <div class="container">
+        <div class="gallery-section">
+            <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=1200&q=80" alt="The Grand Terrace" class="main-image" id="mainImage">
+            <div class="match-badge">
+                <span class="star-icon">⭐</span>
+                <span>90/100 Match</span>
+            </div>
+        </div>
+
+        <div class="thumbnail-gallery">
+            <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=400&q=80" class="thumbnail active" onclick="changeImage(this, 0)">
+            <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=400&q=80" class="thumbnail" onclick="changeImage(this, 1)">
+            <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=400&q=80" class="thumbnail" onclick="changeImage(this, 2)">
+            <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=400&q=80" class="thumbnail" onclick="changeImage(this, 3)">
+        </div>
+
+        <div class="content-section">
+            <h1 class="venue-name">The Grand Terrace</h1>
+
+            <div class="info-cards">
+                <div class="info-card info-card-pink">
+                    <div class="info-card-label">
+                        <span class="info-icon">👥</span>
+                        Capacity
+                    </div>
+                    <div class="info-card-value">220 guests</div>
+                </div>
+                <div class="info-card info-card-purple">
+                    <div class="info-card-label">
+                        <span class="info-icon">💰</span>
+                        Starting Price
+                    </div>
+                    <div class="info-card-value">From $3,800</div>
+                </div>
+                <div class="info-card info-card-blue">
+                    <div class="info-card-label">
+                        <span class="info-icon">📍</span>
+                        Location
+                    </div>
+                    <div class="info-card-value">Santa Monica, CA</div>
+                </div>
+            </div>
+
+            <div class="about-section">
+                <h2 class="section-title">About This Venue</h2>
+                <p class="about-text">
+                    The Grand Terrace offers the best of both worlds with elegant indoor halls and beautiful outdoor terraces. 
+                    This versatile venue features contemporary design, premium amenities, and flexibility to create your dream 
+                    wedding celebration rain or shine.
+                </p>
+            </div>
+
+            <div class="features-section">
+                <h2 class="section-title">Venue Features</h2>
+                <div class="features-grid">
+                    <span class="feature-tag">Indoor Hall</span>
+                    <span class="feature-tag">Outdoor Garden</span>
+                    <span class="feature-tag">Dance Floor</span>
+                    <span class="feature-tag">Catering</span>
+                    <span class="feature-tag">Parking</span>
+                    <span class="feature-tag">AV Equipment</span>
+                    <span class="feature-tag">Bar Service</span>
+                </div>
+            </div>
+
+            <div class="availability-section">
+                <div class="availability-header">
+                    <span class="availability-icon">📅</span>
+                    <span class="availability-title">Check Availability</span>
+                </div>
+                <p class="availability-text">
+                    View our calendar to see available dates and book your perfect wedding day.
+                </p>
+                <button class="select-date-btn" onclick="openCalendar()">Select Date</button>
+            </div>
+
+            <button class="book-button" onclick="bookVenue()">
+                View Calendar & Book This Venue
+            </button>
+        </div>
+    </div>
+
+    <!-- Calendar Modal -->
+    <div class="modal" id="calendarModal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeCalendar()">&times;</span>
+            <h2 class="modal-title">Select Your Wedding Date</h2>
+            <input type="date" class="calendar-input" id="selectedDate">
+            <button class="modal-button" onclick="confirmDate()">Check Availability</button>
+        </div>
+    </div>
+
+    <script src="js/wedding-details.js"></script>
+</body>
+</html>

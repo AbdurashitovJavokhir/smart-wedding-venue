@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(135deg, #ffeef8 0%, #ffe5f0 50%, #fff0f5 100%);
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: #333;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 15px;
+}
+
+.filter-bar {
+    background: white;
+    padding: 20px 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    margin: 0 auto 30px;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.filter-tags {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    flex: 1;
+}
+
+.filter-tag {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: #fff0f5;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+.filter-tag-icon {
+    color: #ff6b9d;
+}
+
+.edit-btn {
+    background: white;
+    border: 1px solid #e5e5e5;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #666;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.3s ease;
+}
+
+.edit-btn:hover {
+    border-color: #ff6b9d;
+    color: #ff6b9d;
+}
+
+.sort-container {
+    max-width: 1200px;
+    margin: 0 auto 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.sort-select {
+    padding: 8px 16px;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    background: white;
+    font-size: 14px;
+    color: #666;
+    cursor: pointer;
+}
+
+.venues-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 30px;
+    padding-bottom: 40px;
+}
+
+.venue-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.venue-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+.venue-image {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    position: relative;
+}
+
+.venue-image-container {
+    position: relative;
+}
+
+.match-score {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #333;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.star-icon {
+    color: #ffc107;
+}
+
+.venue-info {
+    padding: 24px;
+}
+
+.venue-name {
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.venue-description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 16px;
+    line-height: 1.5;
+}
+
+.venue-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.venue-capacity {
+    font-size: 14px;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.venue-price {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ff6b9d;
+}
+
+.view-details-btn {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #ff6b9d 0%, #ff5a8f 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.view-details-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 107, 157, 0.3);
+}
+
+.footer-text {
+    text-align: center;
+    color: #999;
+    font-size: 14px;
+    margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+    .venues-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filter-tags {
+        justify-content: center;
+    }
+
+    .edit-btn {
+        justify-content: center;
+    }
+}

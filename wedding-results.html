@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venues Matching Your Preferences</title>
+    <link rel="stylesheet" href="css/wedding-results.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Venues Matching Your Preferences</h1>
+        <p class="subtitle">Based on your selected date, guest count, budget, and features</p>
+    </div>
+
+    <div class="filter-bar">
+        <div class="filter-tags" id="filterTags">
+            <div class="filter-tag">
+                <span class="filter-tag-icon">📅</span>
+                <span id="dateTag">Any date</span>
+            </div>
+            <div class="filter-tag">
+                <span class="filter-tag-icon">👥</span>
+                <span id="guestsTag">100 guests</span>
+            </div>
+            <div class="filter-tag">
+                <span class="filter-tag-icon">💰</span>
+                <span id="budgetTag">$2,000 - $10,000</span>
+            </div>
+        </div>
+        <button class="edit-btn" onclick="goBack()">
+            <span>✏️</span>
+            Edit Filters
+        </button>
+    </div>
+
+    <div class="sort-container">
+        <select class="sort-select" id="sortSelect">
+            <option value="match">Sort by Match Score</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="capacity">Capacity: High to Low</option>
+        </select>
+    </div>
+
+    <div class="venues-grid" id="venuesGrid"></div>
+
+    <div class="footer-text">
+        Showing top venue matches for your celebration.
+    </div>
+
+    <script src="js/wedding-results.js"></script>
+</body>
+</html>

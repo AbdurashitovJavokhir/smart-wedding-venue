@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Venue - Crystal Ballroom</title>
+    <link rel="stylesheet" href="css/wedding-booking.css">
+</head>
+<body>
+    <div style="max-width: 1200px; margin: 0 auto;">
+        <a href="wedding-details.html" class="back-link">
+            ← Back to Details
+        </a>
+
+        <h1 class="page-title">Crystal Ballroom</h1>
+        <p class="page-subtitle">Select your preferred date and time</p>
+
+        <div class="booking-container">
+            <div class="calendar-section">
+                <div class="calendar-header">
+                    <span class="calendar-icon">📅</span>
+                    <span class="calendar-month" id="currentMonth">January 2026</span>
+                </div>
+
+                <div class="calendar-navigation">
+                    <button class="nav-button">←</button>
+                    <button class="nav-button">→</button>
+                </div>
+
+                <div class="calendar-grid">
+                    <div class="calendar-weekdays">
+                        <div class="weekday">Sun</div>
+                        <div class="weekday">Mon</div>
+                        <div class="weekday">Tue</div>
+                        <div class="weekday">Wed</div>
+                        <div class="weekday">Thu</div>
+                        <div class="weekday">Fri</div>
+                        <div class="weekday">Sat</div>
+                    </div>
+                    <div class="calendar-days" id="calendarDays"></div>
+                </div>
+
+                <div class="time-slots-section">
+                    <div class="section-header">
+                        <span class="section-icon">🕐</span>
+                        <span class="section-title">Available Time Slots</span>
+                    </div>
+                    <div class="time-slots" id="timeSlots">
+                        <div class="time-slot" data-time="10:00-15:00" data-price="4500">
+                            10:00 - 15:00
+                        </div>
+                        <div class="time-slot" data-time="16:00-21:00" data-price="5500">
+                            16:00 - 21:00
+                        </div>
+                        <div class="time-slot selected" data-time="10:00-22:00" data-price="9000">
+                            Full Day (10:00 - 22:00)
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="summary-section">
+                <h3 class="summary-title">Booking Summary</h3>
+
+                <div class="summary-item">
+                    <div class="summary-label">Selected Date</div>
+                    <div class="summary-value" id="selectedDate">Saturday, January 31, 2026</div>
+                </div>
+
+                <div class="summary-item">
+                    <div class="summary-label">Time Slot</div>
+                    <div class="summary-value" id="selectedTime">10:00-22:00</div>
+                </div>
+
+                <div class="summary-item">
+                    <div class="summary-label">Number of Guests</div>
+                    <div class="guest-input-wrapper">
+                        <span class="guest-icon">👥</span>
+                        <input type="number" class="guest-input" id="guestCount" value="100" min="10" max="500">
+                    </div>
+                </div>
+
+                <div class="price-section">
+                    <div class="price-label">Estimated Price</div>
+                    <div class="price-value">$ <span id="totalPrice">9,000</span></div>
+                    <div class="price-breakdown" id="priceBreakdown">
+                        Base price for Full Day slot
+                    </div>
+                </div>
+
+                <button class="confirm-button" id="confirmButton" onclick="confirmBooking()">
+                    Confirm Booking
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/wedding-booking.js"></script>
+</body>
+</html>
